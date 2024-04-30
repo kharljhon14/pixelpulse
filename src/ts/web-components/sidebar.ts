@@ -1,16 +1,27 @@
 const styles = new CSSStyleSheet();
 
 styles.replaceSync(`
+  :host{
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    width: 5rem;
+    height: 100vh;
+    padding: 2rem 0;
+    border-right: 1px solid #000 ;
+  }
+
   .toggle-btn{
       height: 1.6rem;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       align-items: center;
-      background-color: transparent;
+      background: transparent;
       border: none;
       cursor: pointer;
       padding: 0;
+      
       & .toggle-line{
           width: 2rem;
           height: 2px;
@@ -31,7 +42,6 @@ styles.replaceSync(`
     }
 
     & .toggle-line:nth-child(2){
-
       transition-delay: 0s;
       transform: scale(0);
     }

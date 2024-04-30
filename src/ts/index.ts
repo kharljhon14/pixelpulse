@@ -1,3 +1,3 @@
 import SideBar from './web-components/sidebar';
 
-customElements.define('sidebar-component', SideBar);
+if (!customElements.get('sidebar-component')) customElements.define('sidebar-component', SideBar);
