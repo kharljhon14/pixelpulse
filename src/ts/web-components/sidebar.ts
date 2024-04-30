@@ -12,7 +12,7 @@ styles.replaceSync(`
   }
 
   .toggle-btn{
-      height: 1.6rem;
+      height: 1.56rem;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
