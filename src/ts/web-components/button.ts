@@ -2,11 +2,16 @@ const styles = new CSSStyleSheet();
 
 styles.replaceSync(`
 :host{
+    display: inline-block;
     position: relative;
 }
 
 :host(:hover) .container{
     transform: translate(.3rem, .3rem);
+}
+
+:host(:hover) .container-bottom{
+    opacity: 0;
 }
 
 .container{
@@ -17,6 +22,7 @@ styles.replaceSync(`
     text-align: center;
     background-color: #FFF;
     transition: all .4s ease;
+    min-width: 3rem;
 }
 
 .container-bottom{
@@ -30,6 +36,11 @@ styles.replaceSync(`
     padding: 0;
     border-radius: 12px;
     z-index: -2;
+    transition: all .4s ease;
+}
+
+span{
+    font-size: 1rem;
 }
 `);
 

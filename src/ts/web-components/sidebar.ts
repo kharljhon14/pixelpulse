@@ -3,6 +3,8 @@ const styles = new CSSStyleSheet();
 styles.replaceSync(`
   :host{
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     flex-direction: column;
     position: fixed;
     max-width: 5rem;
@@ -15,6 +17,7 @@ styles.replaceSync(`
   }
 
   .toggle-btn{
+      width: 2rem;
       height: 1.56rem;
       display: flex;
       flex-direction: column;
@@ -58,9 +61,22 @@ styles.replaceSync(`
     }
   }
 
+  .sidebar-links{
+    & ::slotted(*){
+      margin-bottom: 1rem;
+    }
+
+    & ::slotted(:last-child){
+        margin-bottom: 0;
+    }
+  }
+
   .sidebar-menu[open]{
     width: 30rem;
     opacity: 1;
+    & ul{
+      opacity: 1;
+    }
   }
 
   .sidebar-menu{
@@ -71,13 +87,18 @@ styles.replaceSync(`
     width: 0rem;
     height: 100%;
     opacity: 0;
+    border: none;
     background-color: #c9bffe;
-    transition: all .5s ease;
+    transition: width .6s ease, opacity 1.5s ease;
     border-right: 1px solid #000;
+    border-top: 1px solid #000;
     & ul{
       list-style: none;
       padding: 2rem;
+      opacity: 0;
       margin: 0;
+
+      transition: opacity .3s ease;
     }
 
       & li{
