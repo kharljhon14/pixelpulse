@@ -44,7 +44,7 @@ styles.replaceSync(`
     & .toggle-line:nth-child(1){
       transform: rotateZ(45deg) translateX(.5rem) translateY(.5rem);
       transition-delay: .3s;
-      height: 3px;
+      height: 2px;
       border-radius: 100%;
     }
 
@@ -56,7 +56,7 @@ styles.replaceSync(`
     & .toggle-line:nth-child(3){
       transform: rotateZ(-45deg) translateX(.5rem) translateY(-.5rem);
       transition-delay: .3s;
-      height: 3px;
+      height: 2px;
       border-radius: 100%;
     }
   }
