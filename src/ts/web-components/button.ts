@@ -44,7 +44,7 @@ export class Button extends HTMLElement {
       this.shadowRoot.adoptedStyleSheets = [styles];
       this.shadowRoot.innerHTML = `
       <button class="container">
-        <span>TEST</span>
+        <span><slot></slot></span>
       </button>
       <div class="container-bottom"></div>
       `;
