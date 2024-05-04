@@ -5,10 +5,13 @@ styles.replaceSync(`
     display: flex;
     flex-direction: column;
     position: fixed;
+    max-width: 5rem;
     width: 5rem;
     height: 100vh;
     padding: 2rem 1.4rem;
     border-right: 1px solid #000;
+    overflow: hidden;
+
   }
 
   .toggle-btn{
@@ -55,7 +58,38 @@ styles.replaceSync(`
     }
   }
 
+  .sidebar-menu[open]{
+    width: 30rem;
+    opacity: 1;
+  }
 
+  .sidebar-menu{
+    position: fixed;
+    left: 5rem;
+    top: 5rem;
+    overflow: hidden;
+    width: 0rem;
+    height: 100%;
+    opacity: 0;
+    background-color: #c9bffe;
+    transition: width .5s ease, opacity .6s ease-in-out;
+    border-right: 1px solid #000;
+    & ul{
+      list-style: none;
+      padding: 2rem;
+      margin: 0;
+    }
+
+      & li{
+        font-size: 3.6rem;
+
+        & a{
+            text-decoration: none;
+            color: #000;
+            text-wrap: nowrap;
+        }
+    }
+  }
 `);
 
 export default class SideBar extends HTMLElement {
@@ -78,12 +112,34 @@ export default class SideBar extends HTMLElement {
         <div class="sidebar-links">
           <slot></slot>
         </div>
+
+        <div class="sidebar-menu">
+          <ul>
+            <li>
+              <a href="/">Home</a>
+            </li>
+            <li>
+              <a href="/">About</a>
+            </li>
+            <li>
+              <a href="/">Our Work</a>
+            </li>
+            <li>
+              <a href="/">Contact</a>
+            </li>
+            <li>
+              <a href="/">Blog</a>
+            </li>
+          </ul>
+        </div>
       `;
 
       const button = this.shadowRoot.querySelector('.toggle-btn');
+      const sidebarNav = this.shadowRoot.querySelector('.sidebar-menu');
 
       button?.addEventListener('click', () => {
         button.toggleAttribute('open');
+        sidebarNav?.toggleAttribute('open');
       });
     }
   }
