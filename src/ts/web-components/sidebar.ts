@@ -72,7 +72,7 @@ styles.replaceSync(`
     height: 100%;
     opacity: 0;
     background-color: #c9bffe;
-    transition: width .5s ease, opacity .6s ease-in-out;
+    transition: all .5s ease;
     border-right: 1px solid #000;
     & ul{
       list-style: none;
@@ -92,7 +92,7 @@ styles.replaceSync(`
   }
 `);
 
-export default class SideBar extends HTMLElement {
+export default class Sidebar extends HTMLElement {
   constructor() {
     super();
 

@@ -6,11 +6,8 @@ html {
     font-family: "Poppins", sans-serif;
 }
 
-sidebar-component {
-
-    & .sidebar-component__links {
-        height: 50rem;
-        background-color: #c9bffe;
-        right: -7rem;
-    }
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
