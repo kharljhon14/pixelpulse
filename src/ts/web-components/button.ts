@@ -7,7 +7,7 @@ styles.replaceSync(`
 }
 
 :host(:hover) .container{
-    transform: translate(.3rem, .3rem);
+    transform: translate(.15rem, .15rem);
 }
 
 :host(:hover) .container-bottom{
@@ -20,19 +20,23 @@ styles.replaceSync(`
     padding: 1rem;
     cursor: pointer;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: #FFF;
     transition: all .4s ease;
-    min-width: 3rem;
+    height: 2.8rem;
+    width: 2.8rem;
 }
 
 .container-bottom{
     border: 1px solid #000;
     position: absolute;
     background-color: #000;
-    width: 97%;
-    height: 97%;
-    left: .3rem;
-    top: .3rem;
+    height: 2.8rem;
+    width: 2.8rem;
+    left: .15rem;
+    top: .15rem;
     padding: 0;
     border-radius: 12px;
     z-index: -2;

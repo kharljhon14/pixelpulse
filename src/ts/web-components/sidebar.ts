@@ -8,12 +8,13 @@ styles.replaceSync(`
     flex-direction: column;
     position: fixed;
     max-width: 5rem;
-    width: 5rem;
+    width: 4.5rem;
     height: 100vh;
     padding: 2rem 1.4rem;
     border-right: 1px solid #000;
     overflow: hidden;
-
+    background-color: #FFF;
+    z-index: 100;
   }
 
   .toggle-btn{
@@ -76,13 +77,14 @@ styles.replaceSync(`
     opacity: 1;
     & ul{
       opacity: 1;
+      left: 0rem;
     }
   }
 
   .sidebar-menu{
     position: fixed;
-    left: 5rem;
-    top: 5rem;
+    left: 4.5rem;
+    top: 4.5rem;
     overflow: hidden;
     width: 0rem;
     height: 100%;
@@ -91,24 +93,36 @@ styles.replaceSync(`
     background-color: #c9bffe;
     transition: width .6s ease, opacity 1.5s ease;
     border-right: 1px solid #000;
-    border-top: 1px solid #000;
     & ul{
       list-style: none;
       padding: 2rem;
       opacity: 0;
       margin: 0;
-
-      transition: opacity .3s ease;
+      left: -15rem;
+      position: relative;
+      transition: opacity .3s ease, left .8s ease-in-out;
     }
 
       & li{
         font-size: 3.6rem;
-
+        width: fit-content;
+        transition: all .5s ease;
         & a{
             text-decoration: none;
             color: #000;
             text-wrap: nowrap;
+            position: relative;
+            transition: all .5s ease;
         }
+      }
+
+      & li:hover{
+        transform: translateX(1rem);
+        
+        & a{
+          color: gray;
+        }
+      }
     }
   }
 `);
