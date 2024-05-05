@@ -15,6 +15,7 @@ body {
     }
 
     & .test {
+        padding: 4rem;
         margin-top: 4.5rem;
         margin-left: 4.5rem;
     }

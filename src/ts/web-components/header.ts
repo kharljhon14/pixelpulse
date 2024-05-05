@@ -6,8 +6,10 @@ styles.replaceSync(`
     border-bottom: 1px solid #000;
     background-color: #FFF;
     position: fixed;
-    width: 100vw;
-    padding-left: 7rem;
+    left: 0;
+    right: 0;
+    margin-left: 4.5rem;
+    padding-left: 2rem;
     height: 4.5rem;
     align-items: center;
     justify-content: space-between;
