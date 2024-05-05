@@ -9,4 +9,13 @@ html {
 body {
     display: flex;
     flex-direction: column;
+
+    & aside {
+        position: fixed;
+    }
+
+    & .test {
+        margin-top: 4.5rem;
+        margin-left: 4.5rem;
+    }
 }

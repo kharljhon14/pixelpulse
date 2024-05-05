@@ -75,6 +75,7 @@ styles.replaceSync(`
   .sidebar-menu[open]{
     width: 30rem;
     opacity: 1;
+    transition: width .6s ease, opacity .3s 0s ease;
     & ul{
       opacity: 1;
       left: 0rem;
@@ -91,7 +92,7 @@ styles.replaceSync(`
     opacity: 0;
     border: none;
     background-color: #c9bffe;
-    transition: width .6s ease, opacity 1.5s ease;
+    transition: width .6s ease, opacity .3s .6s ease;
     border-right: 1px solid #000;
     & ul{
       list-style: none;
