@@ -24,7 +24,7 @@ styles.replaceSync(`
     align-items: center;
     justify-content: center;
     background-color: #FFF;
-    transition: all .4s ease;
+    transition: all .3s ease;
     height: 2.8rem;
     width: 2.8rem;
 }
@@ -33,14 +33,14 @@ styles.replaceSync(`
     border: 1px solid #000;
     position: absolute;
     background-color: #000;
-    height: 2.8rem;
-    width: 2.8rem;
-    left: .15rem;
-    top: .15rem;
+    height: 2.7rem;
+    width: 2.7rem;
+    left: .2rem;
+    top: .2rem;
     padding: 0;
     border-radius: 12px;
     z-index: -2;
-    transition: all .4s ease;
+    transition: all .3s ease;
 }
 
 span{
