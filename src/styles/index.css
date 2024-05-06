@@ -9,6 +9,7 @@ html {
 body {
     display: flex;
     flex-direction: column;
+    color: #232227;
 
     & aside {
         position: fixed;
@@ -27,11 +28,10 @@ body {
 
     & .content,
     .design {
-        height: 20rem;
+        height: 35rem;
         padding: 4rem;
         border-bottom: 1px solid #000;
-        z-index: -3;
-
+        flex: 1;
     }
 
     & .content {
@@ -41,5 +41,52 @@ body {
 
     & .design {
         background-color: #c9bffe;
+        position: relative;
+
+        & .chip-icon {
+            bottom: 13.1rem;
+            left: 15rem;
+
+            & i {
+                animation: spin 3s linear infinite;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+
+        & .chip-design {
+            bottom: 14.4rem;
+            left: 18rem;
+            transform: rotateZ(42deg);
+        }
+
+        & .chip-and {
+            bottom: 0;
+            left: .7rem;
+            transform: rotateZ(-20deg);
+        }
+
+        & .chip-cro {
+            bottom: 6.7rem;
+            left: 15rem;
+        }
+
+        & .chip-development {
+            bottom: .3rem;
+            left: 10rem;
+        }
+
+        &>* {
+            position: absolute;
+            font-weight: 600;
+        }
+    }
+}
+
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
     }
 }

@@ -17,6 +17,7 @@ styles.replaceSync(`
     transition: all .3s ease;
     height: 2rem;
     width: 4rem;
+    position: relative;
     z-index: 2;
 }
 
@@ -26,11 +27,10 @@ styles.replaceSync(`
     background-color: #000;
     height: 2rem;
     width: 4rem;
-    left: .2rem;
-    top: .2rem;
+    left: .3rem;
+    top: .3rem;
     padding: 0;
     border-radius: 20rem;
-    z-index: -1;
     transition: all .3s ease;
 }
 
@@ -53,12 +53,13 @@ export class Chip extends HTMLElement {
       const container = this.shadowRoot.querySelector('.container') as HTMLElement;
 
       container.style.backgroundColor = this.getAttribute('color') ?? '';
+      container.style.fontSize = this.getAttribute('fontSize') ?? '';
 
-      container.style.height = this.getAttribute('height') + 'rem' ?? '';
-      containerBottom.style.height = this.getAttribute('height') + 'rem' ?? '';
+      container.style.height = this.getAttribute('height') + 'rem';
+      containerBottom.style.height = this.getAttribute('height') + 'rem';
 
-      container.style.width = this.getAttribute('width') + 'rem' ?? '';
-      containerBottom.style.width = this.getAttribute('width') + 'rem' ?? '';
+      container.style.width = this.getAttribute('width') + 'rem';
+      containerBottom.style.width = this.getAttribute('width') + 'rem';
 
       container.style.borderRadius = this.getAttribute('borderRadius') ?? '';
       containerBottom.style.borderRadius = this.getAttribute('borderRadius') ?? '';

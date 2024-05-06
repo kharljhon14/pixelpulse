@@ -11,6 +11,10 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
 
     <link
       rel="stylesheet"
@@ -37,9 +41,6 @@
       <main class="wrapper">
         <section class="hero-section">
           <div class="content">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia eaque commodi autem
-            tenetur incidunt sed obcaecati sapiente doloremque quisquam atque eum dignissimos,
-            ducimus alias ipsam saepe sequi explicabo excepturi deleniti?
             <chip-component
               borderRadius="100%"
               height="2"
@@ -49,13 +50,57 @@
           </div>
 
           <div class="design">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam quibusdam facilis
-            voluptate possimus quod quasi, tempore nisi autem neque nobis praesentium deleniti,
-            quae, ut iste quas. Eius id reprehenderit molestiae!
+            <chip-component
+              class="chip-icon"
+              borderRadius="100%"
+              height="7"
+              width="7"
+              fontSize="5.3rem"
+              color="#d4fada"
+            >
+              <i class="bi bi-emoji-smile"></i>
+            </chip-component>
+            <chip-component
+              class="chip-design"
+              height="6"
+              width="20"
+              fontSize="3.3rem"
+              color="#c9bffe"
+            >
+              Design
+            </chip-component>
+            <chip-component
+              class="chip-development"
+              height="6"
+              width="30"
+              fontSize="3.3rem"
+              color="#d4fada"
+            >
+              Development
+            </chip-component>
+            <chip-component
+              class="chip-and"
+              height="10"
+              width="6"
+              fontSize="3.3rem"
+              color="#f3c4cd"
+            >
+              &
+            </chip-component>
+            <chip-component
+              class="chip-cro"
+              height="6"
+              width="15"
+              fontSize="3.3rem"
+              color="#fde3c7"
+            >
+              CRO
+            </chip-component>
           </div>
         </section>
       </main>
     </div>
+
     <sidebar-component>
       <button-component bottom-color="#c9bffe">X</button-component>
       <button-component bottom-color="#fde3c7">F</button-component>
