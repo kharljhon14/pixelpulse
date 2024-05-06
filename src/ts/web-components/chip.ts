@@ -59,6 +59,9 @@ export class Chip extends HTMLElement {
 
       container.style.width = this.getAttribute('width') + 'rem' ?? '';
       containerBottom.style.width = this.getAttribute('width') + 'rem' ?? '';
+
+      container.style.borderRadius = this.getAttribute('borderRadius') ?? '';
+      containerBottom.style.borderRadius = this.getAttribute('borderRadius') ?? '';
     }
   }
 }
