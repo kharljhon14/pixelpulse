@@ -62,33 +62,61 @@ body {
                 align-items: center;
                 justify-content: center;
             }
+
+            &::part(container) {
+                height: 7rem;
+                width: 7rem;
+                font-size: 5.3rem;
+            }
         }
 
         & .chip-design {
             bottom: 14.4rem;
             left: 18rem;
             transform: rotateZ(42deg);
+
+            &::part(container) {
+                height: 6rem;
+                width: 20rem;
+            }
         }
 
         & .chip-and {
             bottom: 0;
             left: .7rem;
             transform: rotateZ(-20deg);
+
+            &::part(container) {
+                height: 10rem;
+                width: 6rem;
+            }
         }
 
         & .chip-cro {
             bottom: 6.7rem;
             left: 15rem;
+
+
+            &::part(container) {
+                height: 6rem;
+                width: 15rem;
+            }
         }
 
         & .chip-development {
             bottom: .3rem;
             left: 10rem;
+
+            &::part(container) {
+                height: 6rem;
+                width: 30rem;
+            }
         }
 
         &>* {
             position: absolute;
             font-weight: 600;
+            font-size: 3.3rem;
         }
     }
 }

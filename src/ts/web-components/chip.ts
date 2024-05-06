@@ -15,8 +15,8 @@ styles.replaceSync(`
     justify-content: center;
     background-color: #FFF;
     transition: all .3s ease;
-    height: 2rem;
-    width: 4rem;
+    height: 100%;
+    width: 100%;
     position: relative;
     z-index: 2;
 }
@@ -25,11 +25,10 @@ styles.replaceSync(`
     border: 1px solid #000;
     position: absolute;
     background-color: #000;
-    height: 2rem;
-    width: 4rem;
-    left: .3rem;
-    top: .3rem;
-    padding: 0;
+    height: 100%;
+    width: 100%;
+    left: .2rem;
+    top: .2rem;
     border-radius: 20rem;
     transition: all .3s ease;
 }
@@ -46,23 +45,12 @@ export class Chip extends HTMLElement {
     if (this.shadowRoot) {
       this.shadowRoot.adoptedStyleSheets = [styles];
       this.shadowRoot.innerHTML = `
-      <div class="container"><slot></slot></div>
-      <div class="container-bottom"></slot>`;
+      <div part="container" class="container"><slot></slot></div>
+      <div part="container-bottom" class="container-bottom"></slot>`;
 
-      const containerBottom = this.shadowRoot.querySelector('.container-bottom') as HTMLElement;
       const container = this.shadowRoot.querySelector('.container') as HTMLElement;
 
       container.style.backgroundColor = this.getAttribute('color') ?? '';
-      container.style.fontSize = this.getAttribute('fontSize') ?? '';
-
-      container.style.height = this.getAttribute('height') + 'rem';
-      containerBottom.style.height = this.getAttribute('height') + 'rem';
-
-      container.style.width = this.getAttribute('width') + 'rem';
-      containerBottom.style.width = this.getAttribute('width') + 'rem';
-
-      container.style.borderRadius = this.getAttribute('borderRadius') ?? '';
-      containerBottom.style.borderRadius = this.getAttribute('borderRadius') ?? '';
     }
   }
 }
