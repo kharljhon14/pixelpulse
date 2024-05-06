@@ -4,14 +4,15 @@ styles.replaceSync(`
 :host{
     display: inline-block;
     position: relative;
+    min-width: 3rem;
 }
 
 :host(:hover) .container{
-    transform: translate(.15rem, .15rem);
+    transform: translate(.2rem, .2rem);
 }
 
 :host(:hover) .container-bottom{
-    opacity: 0;
+  
 }
 
 .container{
@@ -25,21 +26,22 @@ styles.replaceSync(`
     justify-content: center;
     background-color: #FFF;
     transition: all .3s ease;
-    height: 2.8rem;
-    width: 2.8rem;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    z-index: 2;
 }
 
 .container-bottom{
     border: 1px solid #000;
     position: absolute;
     background-color: #000;
-    height: 2.7rem;
-    width: 2.7rem;
+    height: 100%;
+    width: 100%;
     left: .2rem;
     top: .2rem;
     padding: 0;
     border-radius: 12px;
-    z-index: -2;
     transition: all .3s ease;
 }
 
