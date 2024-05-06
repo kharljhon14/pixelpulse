@@ -24,11 +24,14 @@ body {
     display: flex;
     align-content: center;
 
+
     & .content,
     .design {
         height: 20rem;
         padding: 4rem;
         border-bottom: 1px solid #000;
+        z-index: -3;
+
     }
 
     & .content {
