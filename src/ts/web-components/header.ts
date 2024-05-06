@@ -15,9 +15,22 @@ styles.replaceSync(`
     justify-content: space-between;
 }
 
-h1{
+a {
+  text-decoration: none;
+  color: #000;
+  transition: all .4s ease;
+
+  & h1{
     padding: 0;
+    margin: 0;
     font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: .2rem;
+  } 
+}
+
+a:hover {
+  transform: translateX(.2rem);
 }
 
 .header-cta{
@@ -51,7 +64,7 @@ export class Header extends HTMLElement {
     if (this.shadowRoot) {
       this.shadowRoot.adoptedStyleSheets = [styles];
       this.shadowRoot.innerHTML = `
-        <h1>PixelPulse</h1>
+        <a href="/"><h1>PixelPulse</h1></a>
         <div class="header-cta"><slot></slot></div>
       `;
     }
