@@ -37,6 +37,15 @@ body {
     & .content {
         background-color: #fde3c7;
         border-right: 1px solid #000;
+
+        & button-component::part(container) {
+            padding: 1rem 3rem;
+        }
+
+        & button-component::part(content) {
+            font-weight: 500;
+        }
+
     }
 
     & .design {

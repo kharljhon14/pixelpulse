@@ -60,8 +60,8 @@ export class Button extends HTMLElement {
     if (this.shadowRoot) {
       this.shadowRoot.adoptedStyleSheets = [styles];
       this.shadowRoot.innerHTML = `
-      <button class="container">
-        <span><slot></slot></span>
+      <button part="container" class="container">
+        <span><slot part="content"></slot></span>
       </button>
       <div class="container-bottom"></div>
       `;
@@ -69,8 +69,9 @@ export class Button extends HTMLElement {
       const containerBottom = this.shadowRoot.querySelector('.container-bottom') as HTMLElement;
       const container = this.shadowRoot.querySelector('.container') as HTMLElement;
 
-      container.style.backgroundColor = this.getAttribute('color') ?? '';
-      containerBottom.style.backgroundColor = this.getAttribute('bottom-color') ?? '';
+      container.style.backgroundColor = this.getAttribute('bgColor') ?? '';
+      container.style.color = this.getAttribute('color') ?? '';
+      containerBottom.style.backgroundColor = this.getAttribute('bottomColor') ?? '';
     }
   }
 }
