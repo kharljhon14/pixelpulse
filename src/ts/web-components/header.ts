@@ -36,7 +36,7 @@ a:hover {
 .header-cta{
     background-color: #f3c4cd;
     height: 100%;
-    min-width: 13rem;
+    min-width: 14rem;
     border-left: 1px solid #000;
     display: flex;
     align-items: center;
