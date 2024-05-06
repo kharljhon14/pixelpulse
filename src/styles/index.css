@@ -13,10 +13,30 @@ body {
     & aside {
         position: fixed;
     }
+}
 
-    & .test {
+.wrapper {
+    margin-top: 4.5rem;
+    margin-left: 4.5rem;
+}
+
+.hero-section {
+    display: flex;
+    align-content: center;
+
+    & .content,
+    .design {
+        height: 20rem;
         padding: 4rem;
-        margin-top: 4.5rem;
-        margin-left: 4.5rem;
+        border-bottom: 1px solid #000;
+    }
+
+    & .content {
+        background-color: #fde3c7;
+        border-right: 1px solid #000;
+    }
+
+    & .design {
+        background-color: #c9bffe;
     }
 }
