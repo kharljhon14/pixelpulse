@@ -137,6 +137,14 @@ body {
     }
 }
 
+.clients {
+    border-bottom: 1px solid #000;
+
+    & .header {
+        border-right: 1px solid #000;
+    }
+}
+
 
 @keyframes spin {
     100% {
