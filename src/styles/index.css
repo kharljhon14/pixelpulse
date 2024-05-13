@@ -141,7 +141,14 @@ body {
     border-bottom: 1px solid #000;
 
     & .header {
-        border-right: 1px solid #000;
+        display: flex;
+
+        & h2 {
+            font-weight: 300;
+            padding: 2rem;
+            border-right: 1px solid #000;
+
+        }
     }
 }
 
