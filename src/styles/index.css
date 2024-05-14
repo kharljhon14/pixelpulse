@@ -67,6 +67,7 @@ body {
     & .design {
         background-color: #c9bffe;
         position: relative;
+        z-index: -1;
 
         & .chip-icon {
             bottom: 13.1rem;
@@ -164,6 +165,49 @@ body {
 
 }
 
+
+.services-section {
+    padding: 4rem;
+
+    & .sevices__title {
+        font-size: 3.4rem;
+        font-weight: 500;
+        margin-bottom: 4rem;
+    }
+
+    & .cards-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        & .card-content {
+            display: flex;
+            flex-direction: column;
+
+            & .card-content__title {
+                margin-bottom: 1rem;
+                font-size: 1.8rem;
+                font-weight: 600;
+            }
+
+            & .card-content__subtitle {
+                margin-bottom: 1rem;
+                font-weight: 300;
+            }
+
+            & i {
+                font-size: 3rem;
+                margin-bottom: 1rem;
+            }
+        }
+
+        & card-component::part(content) {
+            width: 20rem;
+            min-height: 20rem;
+        }
+    }
+
+}
 
 @keyframes spin {
     100% {
