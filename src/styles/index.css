@@ -137,24 +137,47 @@ body {
     }
 }
 
-.clients {
+.clients-section {
     border-bottom: 1px solid #000;
+    display: flex;
 
-    & .header {
-        display: flex;
-
-        & h2 {
-            font-weight: 300;
-            padding: 2rem;
-            border-right: 1px solid #000;
-
-        }
+    & h2 {
+        font-weight: 300;
+        padding: 2rem;
+        border-right: 1px solid #000;
     }
+
+    & .clients {
+        display: flex;
+        flex-grow: 1;
+        justify-content: space-between;
+        align-items: center;
+        overflow: hidden;
+
+        & img {
+            width: 8rem;
+            position: relative;
+            height: 100%;
+        }
+
+    }
+
 }
 
 
 @keyframes spin {
     100% {
         transform: rotate(360deg);
+    }
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(90rem);
+
+    }
+
+    100% {
+        transform: translateX(-40rem);
     }
 }
