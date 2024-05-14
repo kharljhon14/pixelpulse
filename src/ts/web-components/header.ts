@@ -13,6 +13,7 @@ styles.replaceSync(`
     height: 4.5rem;
     align-items: center;
     justify-content: space-between;
+    z-index: 5;
 }
 
 a {

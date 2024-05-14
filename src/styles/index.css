@@ -18,8 +18,6 @@ body {
 .wrapper {
     margin-top: 4.5rem;
     margin-left: 4.5rem;
-    z-index: -4;
-    position: relative;
 }
 
 .hero-section {
@@ -33,7 +31,6 @@ body {
         padding: 4rem;
         border-bottom: 1px solid #000;
         flex: 1;
-        z-index: -1;
     }
 
     & .content {
@@ -170,6 +167,8 @@ body {
 
 .services-section {
     padding: 4rem;
+    border-bottom: 1px solid #000;
+
 
     & .sevices__title {
         font-size: 3.4rem;

@@ -14,6 +14,7 @@ styles.replaceSync(`
     border-right: 1px solid #000;
     overflow: hidden;
     background-color: #FFF;
+    z-index: 6;
   }
 
   .toggle-btn{
@@ -75,6 +76,7 @@ styles.replaceSync(`
     width: 30rem;
     opacity: 1;
     transition: width .6s ease, opacity .3s 0s ease;
+    z-index: 0;
     & ul{
       opacity: 1;
       left: 0rem;
@@ -93,6 +95,7 @@ styles.replaceSync(`
     background-color: #c9bffe;
     transition: width .6s ease, opacity .3s .6s ease;
     border-right: 1px solid #000;
+    z-index: -200;
     & ul{
       list-style: none;
       padding: 2rem;
