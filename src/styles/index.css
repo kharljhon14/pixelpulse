@@ -150,7 +150,7 @@ body {
     & .clients {
         display: flex;
         flex-grow: 1;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
         overflow: hidden;
 
@@ -168,16 +168,5 @@ body {
 @keyframes spin {
     100% {
         transform: rotate(360deg);
-    }
-}
-
-@keyframes slide {
-    0% {
-        transform: translateX(90rem);
-
-    }
-
-    100% {
-        transform: translateX(-40rem);
     }
 }
