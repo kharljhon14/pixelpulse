@@ -14,7 +14,6 @@ styles.replaceSync(`
     border-right: 1px solid #000;
     overflow: hidden;
     background-color: #FFF;
-    z-index: 100;
   }
 
   .toggle-btn{
