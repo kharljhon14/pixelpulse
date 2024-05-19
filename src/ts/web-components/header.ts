@@ -52,6 +52,12 @@ a:hover {
           margin-right: 0;
       }
 }
+
+@media(max-width: 1220px){
+  :host{
+    margin-left: 0rem;
+  }
+}
 `);
 
 export class Header extends HTMLElement {

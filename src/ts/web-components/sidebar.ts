@@ -127,13 +127,19 @@ styles.replaceSync(`
         }
       }
     }
+
+    @media (max-width: 1220px){
+      :host{
+        display: none;
+      }
+    }
   }
+  
 `);
 
 export default class Sidebar extends HTMLElement {
   constructor() {
     super();
-
     this.attachShadow({ mode: 'open' });
   }
 
