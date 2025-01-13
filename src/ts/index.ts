@@ -1,3 +1,4 @@
+import { Accordion } from './web-components/accordion';
 import { Button } from './web-components/button';
 import { Card } from './web-components/card';
 import { Chip } from './web-components/chip';
@@ -9,3 +10,5 @@ if (!customElements.get('chip-component')) customElements.define('chip-component
 if (!customElements.get('sidebar-component')) customElements.define('sidebar-component', Sidebar);
 if (!customElements.get('header-component')) customElements.define('header-component', Header);
 if (!customElements.get('card-component')) customElements.define('card-component', Card);
+if (!customElements.get('accordion-component'))
+  customElements.define('accordion-component', Accordion);
