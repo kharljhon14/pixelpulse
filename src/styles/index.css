@@ -595,31 +595,47 @@ footer {
             flex-direction: column;
             gap: 2rem;
 
-            & .card-content {
-                display: flex;
-                flex-direction: column;
+        }
+    }
 
-                & .card-content__title {
-                    margin-bottom: 1rem;
-                    font-size: 1.8rem;
-                    font-weight: 600;
-                }
+    .projects-section {
+        display: flex;
+        flex-direction: column;
 
-                & .card-content__subtitle {
-                    margin-bottom: 1rem;
-                    font-weight: 300;
-                }
+        & .project {
+            flex-direction: column;
+            height: auto;
 
-                & i {
-                    font-size: 3rem;
-                    margin-bottom: 1rem;
+            & .project__desc {
+
+
+                & p {
+                    text-align: center;
+                    padding: 0rem;
                 }
             }
 
-            & card-component::part(content) {
-                max-width: 21rem;
-                min-height: 20rem;
+            &>* {
+                padding: 2rem;
             }
+        }
+
+        & .project:nth-child(even) {
+
+            & .project__desc {
+                order: 1;
+                text-align: center;
+
+                & p {
+                    padding: 0 0rem;
+
+                }
+            }
+
+            & .project__img {
+                order: 2;
+            }
+
         }
 
     }
