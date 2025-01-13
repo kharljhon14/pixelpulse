@@ -640,6 +640,29 @@ footer {
 
     }
 
+    .reviews-section {
+        padding: 2rem;
+        border-bottom: 1px solid #000;
+
+        & h2 {
+            font-size: 3.6rem;
+            font-weight: 400;
+            margin-bottom: 4rem;
+            text-align: center;
+        }
+
+        & .cards-container {
+
+            flex-direction: column;
+            gap: 2rem;
+
+            & .card-content {
+                width: auto;
+
+            }
+        }
+    }
+
 }
 
 
